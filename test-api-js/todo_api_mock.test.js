@@ -2,7 +2,6 @@
 // var todoservice = require('./todo.service.js');
 const app = require("./index");
 
-
 jest.mock('./todo.service.js');
 
 jest.mock('./index');

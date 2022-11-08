@@ -19,19 +19,22 @@ class todoservice{
     }
 
     get_todos(){
-        return this.todos;
+        return this.todo_data;
     }
 
     add_todo(todo){
-        // Your code here
+        this.todo_data.todo.push(todo);
+        return this.todo_data;
+        console.log(this.todo_data);
     }
 
     delete_todo(id){
-        // Your code here
+        delete this.todo_data.todo[0]     
     }
 
     update_todo(id, todo){
-        // Your code here
+    this.todo_data.todo[id] = todo;
+    return this.todo_data;
     }
 }
 
