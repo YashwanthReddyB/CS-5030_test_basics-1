@@ -18,4 +18,11 @@ describe('todo test suite', () => {
     test("get_todos", () => {
         expect(todo_service.get_todos().todo.length).toEqual(3);
     });
+
+    
+    test("add_todos", () => { 
+        todo_service.add_todo({"title": "Title: 04", "description": "Rare Description", "done": false});
+        expect(todo_service.get_todos().todo.length).toEqual(4);
+    });
+
 });
