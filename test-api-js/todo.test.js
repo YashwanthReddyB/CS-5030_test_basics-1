@@ -24,5 +24,15 @@ describe('todo test suite', () => {
         todo_service.add_todo({"title": "Title: 04", "description": "Rare Description", "done": false});
         expect(todo_service.get_todos().todo.length).toEqual(4);
     });
+    test("update_todo", ()=>{
+        todo_service.update_todo(3,{ "id": 3, "title": "Awesome Title", "completed": true })
+        
+        for (let i of todo_service.get_todos().todo){
+            if (i["id"] == 3){
+                expect(i["completed"]).toEqual(true)
+            }
+        }
+    })
+   
 
 });
