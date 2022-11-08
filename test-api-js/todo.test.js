@@ -33,6 +33,10 @@ describe('todo test suite', () => {
             }
         }
     })
-   
+    test("delete_todos", () => {
+        todo_service.delete_todo(1);
+        expect(todo_service.get_todos(1) == undefined);
+    });
+
 
 });
